@@ -59,3 +59,9 @@ body {
 		max-width: 1148px;
 	}
 }
+
+@media screen and (min-width: 1920px) {
+	.container {
+		max-width: 1440px;
+	}
+}
