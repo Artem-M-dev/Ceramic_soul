@@ -62,7 +62,7 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 450px;
+            width: clamp(450px, 37.5vw, 640px);
             height: 633px;
         }
 
@@ -90,11 +90,9 @@
         }
 
         &__potter {
-            width: 640px;
             height: 900px;
         }
         &__title {
-            font-size: 32px;
             padding-left: 642px;
             padding-top: 384px;
         }
