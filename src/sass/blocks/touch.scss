@@ -23,6 +23,7 @@
         font-size: 14px;
         font-weight: 400;
         line-height: 28px;
+
         &:nth-child(2) {
             margin-top: 8px;
         }
@@ -68,24 +69,53 @@
             font-size: 14px;
         }
     }
+
     &__check-block {
         margin-top: 20px;
         display: flex;
         align-items: center;
+
         a {
             color: #A22DC6;
             text-decoration: none;
             margin-left: 2px;
         }
     }
+
     &__checkbox {
-        // vertical-align: middle;
         margin-right: 15px;
         width: 15px;
         height: 15px;
     }
+
     &__btn {
         margin-top: 20px;
+    }
+
+    &__logo {
+        display: none;
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .touch {
+        &__wrapper {
+            position: relative;
+        }
+
+        &__form {
+            width: 300px;
+            padding-left: 24px;
+        }
+
+        &__decor {
+            position: absolute;
+            display: block;
+            right: 0;
+            bottom: 0;
+        }
+
     }
 }
 
