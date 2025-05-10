@@ -1,44 +1,38 @@
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+
 import "purecss/build/grids-min.css"
 import "purecss/build/grids-responsive-min.css"
 
 import "/src/sass/style.scss";
 
-let text = "Hello world";
-const isOpen = true;
-const pi = 3.14;
+try {
+    new Swiper('.works__slider', {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            1200: {
+                slidesPerView: 3,
+                spaceBetween: 5,
+            },
+            1920: {
+                spaceBetween: 35,
+            }
+        },
+        modules: [Navigation, Pagination],
+    });
+} catch (e) { }
 
-text = "This is text!"
-// pi = 4
-
-console.log(text);
-console.log(pi);
-
-const object = {
-    name: "Artem",
-    age: 15,
-};
-
-console.log(object.name);
-
-const titles = [
-    "Make your dream come true or decorate your home",
-    "create or buy", 
-    "our store", 
-    "our workshop"
-];
-
-function calc(a, b) {
-    console.log(a + b);
-};
-
-calc(12, 8); //Вызов функции  
-calc(20, 79);
-
-if (isOpen) {
-    console.log("Shop is open");
-} else {
-    console.log("Shop is close");
-};
-
-const vase = document.querySelector('.touch__decor');
-console.log(vase);
