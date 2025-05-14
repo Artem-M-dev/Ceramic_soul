@@ -28,6 +28,7 @@
         font-weight: 500;
         line-height: normal;
         text-transform: uppercase;
+
         &_active::before {
             content: '';
             position: absolute;
@@ -35,6 +36,98 @@
             height: 1px;
             background-color: #000;
             bottom: -1px;
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin: 60px 0 60px 0;
+    }
+
+    &__decoration {
+        position: absolute;
+        border: 1px solid $dark;
+        border-bottom: none;
+        border-right: none;
+        width: 200px;
+        height: 200px;
+        left: 0;
+        top: 0
+    }
+
+    &__content-item {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__content-wrapper {
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    &__content-info div {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+    }
+
+    &__content-info {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+        padding: 11px 11px 16px 12px;
+        border: 1px solid $dark;
+        border-top: none;
+
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .catalog {
+        &__tabs {
+            padding: 13px 20px;
+            width: 459px;
+        }
+
+        &__content {
+            margin-top: 60px;
+            padding: 10px 10px 0 10px;
+            &-item {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                column-gap: 20px;
+            }
+
+            &-wrapper {
+                width: calc((100% - 20px) / 2);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .catalog {
+        &__content-item {
+            gap: 35px
+        }
+        &__content-wrapper {
+            width: calc((100% - 120px) / 3);
+        }
+        &__content {
+            margin-top: 60px;
+            padding: 25px 25px 0 25px;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .catalog {
+        &__content-item {
+            gap: 25px 83px;
+        }
+        &__content-wrapper {
+            width: 285px;
         }
     }
 }
