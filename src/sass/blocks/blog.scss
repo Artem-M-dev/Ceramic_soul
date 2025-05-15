@@ -9,6 +9,7 @@
         text-align: left;
     }
     &__wrapper {
+        position: relative;
         margin-top: 60px;
         display: flex;
         flex-wrap: wrap;
@@ -39,5 +40,22 @@
     &__img {
         max-inline-size: calc(100% + 2px);
         transform: translateX(-1px) translateY(-1px);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .blog {
+        &__wrapper {
+            padding: 25px 25px 0 25px;
+        }
+        &__text {
+            margin-top: 15px;
+        }
+        &__data {
+            &-column {
+                gap: 0; 
+                justify-content: space-between;
+            }
+        }
     }
 }
