@@ -72,12 +72,7 @@
         }
 
         &__btn {
-            @include button;
-            width: 90px;
-            height: 40px;
             margin-top: 20px;
-            color: $light;
-            border-color: $light;
         }
 
         &-icons {
