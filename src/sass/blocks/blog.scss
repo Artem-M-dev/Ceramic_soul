@@ -59,3 +59,37 @@
         }
     }
 }
+
+@media screen and (min-width: 1200px) {
+    .blog {
+        &__wrapper {
+            align-items: flex-start;
+        }
+        &__card {
+            width: calc((100% - 50px) / 2);
+        }
+        &__img {
+            min-height: 240px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media screen and (min-width: 1920px) {
+	.blog {
+		padding-top: 40px;
+		&__wrapper {
+			align-items: stretch;
+		}
+		&__title {
+			margin-top: 100px;
+		}
+		&__card {
+			width: 670px;
+		}
+		&__img {
+			height: 241px;
+			object-fit: cover;
+		}
+	}
+}
