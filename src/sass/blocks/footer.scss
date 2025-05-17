@@ -8,11 +8,17 @@
 
     .just-validate-error-field {
         border: none;
-        outline: 1px solid $ui-error;
+        // outline: 1px solid $ui-error;
+        border-bottom: 1px solid $ui-error;
     }
 
     .just-validate-error-field::placeholder {
-        color: $ui-error
+        color: $ui-error;
+    }
+    input {
+        border: none;
+        border-bottom: 1px solid;
+        outline: none;
     }
 
     &__title-main {
