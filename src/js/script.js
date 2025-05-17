@@ -118,3 +118,38 @@ try {
 } catch (e) {
 
 }
+
+try {
+	const validatorFooter = new JustValidate(".footer__form");
+
+	validatorFooter
+		.addField(
+			"#footer__email",
+			[
+				{
+					rule: "required",
+				},
+				{
+					rule: "email",
+				},
+			],
+			{
+				errorsContainer: document
+					.querySelector("#footer__email")
+					.parentElement.querySelector(".email-error-message"),
+			}
+		)
+		.addField(
+			"#footer__checkbox",
+			[
+				{
+					rule: "required",
+				},
+			],
+			{
+				errorsContainer: document
+					.querySelector("#footer__checkbox")
+					.parentElement.parentElement.querySelector(".check-error-message"),
+			}
+		);
+} catch (e) {}
